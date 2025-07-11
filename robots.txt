@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rehive.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Disallow specific paths (if needed in future)
+# Disallow: /admin/
+# Disallow: /private/ 

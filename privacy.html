@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Rehive Global Money Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="components.js"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        letter-spacing: -0.025em;
+      }
+      .elegant-gradient {
+        background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%) !important;
+        background-color: #000000 !important;
+      }
+      .logo {
+        font-family: 'Inter', sans-serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+        letter-spacing: -0.05em;
+      }
+      
+      /* Modern pill-shaped button with shading */
+      .modern-pill-button {
+        background: linear-gradient(135deg, #4a5568 0%, #2d3748 50%, #1a202c 100%);
+        color: white;
+        padding: 0.875rem 2rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: none;
+        box-shadow: 
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        animation: subtle-pulse 3s ease-in-out infinite;
+      }
+      
+      .modern-pill-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      }
+      
+      .modern-pill-button:hover {
+        background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #000000 100%);
+        transform: translateY(-1px);
+        box-shadow: 
+          0 10px 15px -3px rgba(0, 0, 0, 0.1),
+          0 4px 6px -2px rgba(0, 0, 0, 0.05),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      }
+      
+      .modern-pill-button:active {
+        transform: translateY(0);
+        box-shadow: 
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06),
+          inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .modern-pill-button:focus {
+        outline: none;
+        box-shadow: 
+          0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 0 0 3px rgba(255, 255, 255, 0.5);
+      }
+      
+      /* Smaller pill button for header */
+      .modern-pill-button-sm {
+        background: linear-gradient(135deg, #4a5568 0%, #2d3748 50%, #1a202c 100%);
+        color: white;
+        padding: 0.5rem 1.25rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        font-size: 0.875rem;
+        letter-spacing: 0.025em;
+        text-transform: uppercase;
+        border: none;
+        box-shadow: 
+          0 2px 4px -1px rgba(0, 0, 0, 0.1),
+          0 1px 2px -1px rgba(0, 0, 0, 0.06),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        overflow: hidden;
+        animation: subtle-pulse 3s ease-in-out infinite;
+      }
+      
+      .modern-pill-button-sm::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      }
+      
+      .modern-pill-button-sm:hover {
+        background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #000000 100%);
+        transform: translateY(-1px);
+        box-shadow: 
+          0 6px 12px -2px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.05),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      }
+      
+      .modern-pill-button-sm:active {
+        transform: translateY(0);
+        box-shadow: 
+          0 2px 4px -1px rgba(0, 0, 0, 0.1),
+          0 1px 2px -1px rgba(0, 0, 0, 0.06),
+          inset 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .modern-pill-button-sm:focus {
+        outline: none;
+        box-shadow: 
+          0 2px 4px -1px rgba(0, 0, 0, 0.1),
+          0 1px 2px -1px rgba(0, 0, 0, 0.06),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 0 0 3px rgba(255, 255, 255, 0.5);
+      }
+      
+      /* Subtle pulsing animation for Coming Soon buttons */
+      @keyframes subtle-pulse {
+        0%, 100% {
+          box-shadow: 
+            0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06),
+            inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        50% {
+          box-shadow: 
+            0 8px 16px -2px rgba(0, 0, 0, 0.15),
+            0 4px 8px -1px rgba(0, 0, 0, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+      }
+      
+      /* Responsive design improvements */
+      @media (max-width: 640px) {
+        .text-5xl { font-size: 2.25rem !important; line-height: 1.2 !important; }
+        .text-3xl { font-size: 1.75rem !important; line-height: 1.3 !important; }
+        .text-xl { font-size: 1.125rem !important; line-height: 1.4 !important; }
+        
+        .py-24 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+        .py-16 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+        .mb-8 { margin-bottom: 0.75rem !important; }
+        .mb-6 { margin-bottom: 0.5rem !important; }
+        
+        .p-6 { padding: 1rem !important; }
+        .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+        
+        .prose { font-size: 0.875rem !important; }
+        .prose h2 { font-size: 1.5rem !important; margin-bottom: 1rem !important; }
+        .prose p { margin-bottom: 1rem !important; }
+        .prose ul { margin-bottom: 1rem !important; }
+        .prose li { margin-bottom: 0.5rem !important; }
+        
+        /* Mobile button adjustments */
+        .modern-pill-button {
+          padding: 0.75rem 1.5rem !important;
+          font-size: 0.8rem !important;
+        }
+        
+        .modern-pill-button-sm {
+          padding: 0.5rem 1rem !important;
+          font-size: 0.8rem !important;
+        }
+      }
+      
+      @media (min-width: 641px) and (max-width: 1024px) {
+        .text-5xl { font-size: 3rem !important; }
+        .text-3xl { font-size: 2rem !important; }
+        .py-24 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Header Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <!-- Header -->
+    <section class="py-24 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-gray-900">
+          PRIVACY POLICY
+        </h1>
+        <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
+          Last updated: June 2025
+        </p>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <section class="py-16 px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none">
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            At Rehive Inc. ("Rehive", "we", "our", or "us"), we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our websites, use our mobile apps, or interact with any part of the Rehive ecosystem. By using our services, you agree to the terms outlined in this policy.
+          </p>
+
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            This policy applies across all Rehive properties including our website (e.g., www.rehive.com), mobile apps, and related applications, collectively referred to as the "Service."
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Definitions</h2>
+          <ul class="text-gray-700 mb-8 leading-relaxed space-y-2">
+            <li><strong>Account:</strong> A profile created by you to access Rehive Services.</li>
+            <li><strong>Company:</strong> Rehive Inc.</li>
+            <li><strong>Cookies:</strong> Small data files stored on your device used to improve user experience.</li>
+            <li><strong>Country:</strong> Delaware, United States.</li>
+            <li><strong>Personal Data:</strong> Information that identifies or can be used to identify a person.</li>
+            <li><strong>Service:</strong> Websites, apps, APIs, and any other digital properties provided by Rehive.</li>
+            <li><strong>Service Provider:</strong> Third parties who process data on Rehive's behalf.</li>
+            <li><strong>Usage Data:</strong> Data collected automatically related to service usage (e.g., IP address, browser info, session times).</li>
+            <li><strong>You:</strong> Any individual or entity using the Service.</li>
+          </ul>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Information We Collect</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            We may collect the following types of personal data:
+          </p>
+          <ul class="text-gray-700 mb-8 leading-relaxed space-y-2">
+            <li><strong>Contact Information:</strong> Name, email address, phone number</li>
+            <li><strong>Address Information:</strong> Residential and business address</li>
+            <li><strong>Identity Verification:</strong> Government-issued IDs for verification (e.g., passport, driver's license)</li>
+            <li><strong>Financial Information:</strong> Payment or crypto wallet details</li>
+            <li><strong>Technical Data:</strong> Usage data including device and location information</li>
+          </ul>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Usage Data</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Collected automatically when you interact with our services. This may include:
+          </p>
+          <ul class="text-gray-700 mb-8 leading-relaxed space-y-2">
+            <li><strong>Network Information:</strong> IP address</li>
+            <li><strong>Device Information:</strong> Device and browser type</li>
+            <li><strong>Navigation Data:</strong> Referring and exit pages</li>
+            <li><strong>Activity Logs:</strong> Pages visited, time spent, and crash logs</li>
+            <li><strong>Location Data:</strong> Location data if you permit it</li>
+          </ul>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Cookies and Tracking Technologies</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            We use both session and persistent cookies for the following purposes:
+          </p>
+          <ul class="text-gray-700 mb-4 leading-relaxed space-y-2">
+            <li><strong>Security:</strong> Authentication and account security</li>
+            <li><strong>User Experience:</strong> Remembering preferences</li>
+            <li><strong>Analytics:</strong> Analyzing traffic and behavior</li>
+            <li><strong>Compliance:</strong> Complying with legal requirements</li>
+          </ul>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            You can control cookie preferences via your browser. Some features may not function if cookies are disabled.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">How We Use Personal Data</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            We use your personal data for the following purposes:
+          </p>
+          <ol class="text-gray-700 mb-8 leading-relaxed space-y-2 list-decimal list-inside">
+            <li>To verify your identity and perform KYC/AML screening</li>
+            <li>To provide, manage, and improve our Services</li>
+            <li>To communicate with you (support, updates, marketing)</li>
+            <li>To prevent fraud and ensure compliance</li>
+            <li>To personalize your experience</li>
+            <li>To fulfill legal obligations</li>
+          </ol>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Data Retention</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            We keep your data only as long as necessary for the purposes stated in this policy or as required by law. Our retention periods are as follows:
+          </p>
+          <ul class="text-gray-700 mb-8 leading-relaxed space-y-2">
+            <li><strong>Active account data:</strong> Retained for the duration of the relationship</li>
+            <li><strong>Closed/dormant accounts:</strong> Retained for up to 7 years</li>
+            <li><strong>Analytics and security logs:</strong> Retained as needed for internal use</li>
+          </ul>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">International Transfers</h2>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            Your information may be stored and processed in countries outside your own. Where this occurs, we take appropriate steps to ensure adequate protection is in place.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Data Disclosure</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            We may share your data in the following circumstances:
+          </p>
+          <ol class="text-gray-700 mb-8 leading-relaxed space-y-2 list-decimal list-inside">
+            <li>With trusted third-party service providers for business functions</li>
+            <li>As required by legal authorities under applicable law</li>
+            <li>In connection with business transfers such as mergers or acquisitions</li>
+            <li>To protect Rehive, its users, or the public against harm or fraud</li>
+          </ol>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Data Security</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            We implement the following security measures to protect your data:
+          </p>
+          <ul class="text-gray-700 mb-4 leading-relaxed space-y-2">
+            <li>Encryption of data in transit and at rest</li>
+            <li>Access controls and authentication</li>
+            <li>Secure software development practices</li>
+            <li>Regular security audits and monitoring</li>
+          </ul>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            However, no system is completely foolproof, and we cannot guarantee absolute security.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Your Rights</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            Depending on your location, you may have the following rights:
+          </p>
+          <ol class="text-gray-700 mb-4 leading-relaxed space-y-2 list-decimal list-inside">
+            <li>Access, correct, or delete your personal data</li>
+            <li>Restrict or object to certain processing</li>
+            <li>Withdraw consent where applicable</li>
+            <li>File complaints with relevant data protection authorities</li>
+          </ol>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            Contact us at privacy@rehive.com to exercise your rights.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Children's Privacy</h2>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            Our Services are not intended for individuals under the age of 13. If we discover we have collected data from a minor without parental consent, we will delete it.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">External Links</h2>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            Our Services may link to third-party sites. We are not responsible for their privacy practices and encourage you to review their policies.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Changes to This Policy</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            We may update this Privacy Policy from time to time. When we make changes:
+          </p>
+          <ul class="text-gray-700 mb-4 leading-relaxed space-y-2">
+            <li>Material changes will be communicated via email or prominent in-app notification</li>
+            <li>The updated policy will be posted on our website</li>
+            <li>Continued use of the Services implies acceptance of the updated terms</li>
+          </ul>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            We recommend reviewing this policy periodically to stay informed about how we protect your information.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Contact Us</h2>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            If you have questions or concerns about this Privacy Policy, please reach out through any of the following channels:
+          </p>
+          <ul class="text-gray-700 mb-8 leading-relaxed space-y-2">
+            <li><strong>Email:</strong> privacy@rehive.com</li>
+            <li><strong>Website:</strong> www.rehive.com</li>
+            <li><strong>Response time:</strong> We aim to respond to privacy inquiries within 30 days</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      // Initialize Lucide icons
+      document.addEventListener('DOMContentLoaded', function() {
+        lucide.createIcons();
+      });
+    </script>
+  </body>
+</html> 
