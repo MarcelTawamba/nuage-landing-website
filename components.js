@@ -19,7 +19,7 @@
         
         <!-- CTA Buttons -->
         <div class="flex items-center space-x-3 md:space-x-4">
-          <a href="https://app.rehive.xyz" class="modern-pill-button-sm text-xs md:text-sm">GET STARTED</a>
+          <a href="https://app.rehivepay.com" class="modern-pill-button-sm text-xs md:text-sm">GET STARTED</a>
           
           <!-- Mobile menu button - visible only on mobile -->
           <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" id="mobile-menu-button">
