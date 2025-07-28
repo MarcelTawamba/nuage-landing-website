@@ -7,7 +7,7 @@
         <!-- Logo -->
         <div class="flex items-center space-x-2 md:space-x-3">
           <a href="index.html" class="flex items-center space-x-2 md:space-x-3 hover:opacity-80 transition-opacity">
-            <img src="logo.svg" alt="Rehive" class="h-8 md:h-10 w-auto">
+            <img src="img/logo.svg" alt="Rehive" class="h-8 md:h-10 w-auto">
           </a>
         </div>
         
@@ -47,7 +47,7 @@
           <div>
             <div class="flex items-center space-x-2 md:space-x-3 mb-4 md:mb-6">
               <a href="index.html" class="flex items-center space-x-2 md:space-x-3 hover:opacity-80 transition-opacity">
-                <img src="logo.svg" alt="Rehive" class="h-8 md:h-10 w-auto filter brightness-0 invert">
+                <img src="img/logo.svg" alt="Rehive" class="h-8 md:h-10 w-auto filter brightness-0 invert">
               </a>
             </div>
             <p class="text-sm md:text-base text-gray-400 mb-4 md:mb-6 max-w-md leading-relaxed">
