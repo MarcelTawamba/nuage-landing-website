@@ -1,0 +1,26 @@
+COMPANY_NAME=XYZ
+APP_DESCRIPTION=Global Money Account
+COMPANY_DESCRIPTION=The easiest way to get paid, move money, and hold dollars—wherever you are. Available in 100+ countries with USD/EUR bank accounts, crypto support, and global transfers.
+SITE_URL=https://xyz.com
+SUPPORT_EMAIL=support@xyz.com
+SIGN_IN_URL=https://app.xyz.com
+YEAR=2025
+
+# Website Style & Branding
+PRIMARY_FONT=Inter
+THEME_COLOR=#000000
+BACKGROUND_COLOR=#ffffff
+
+# Company Information
+COMPANY_ADDRESS_COUNTRY=US
+COMPANY_ADDRESS=2093 Philadelphia Pike #1991, Claymont, DE 19703
+COMPANY_FOUNDING_DATE=2024
+TWITTER_HANDLE=@xyz
+LINKEDIN_URL=https://linkedin.com/company/xyz
+
+# Website Concept
+STYLE_CONCEPT=Modern, clean fintech design with elegant gradients and pill-shaped buttons
+COLOR_SCHEME=Black and white with gray accents, minimal and professional
+TYPOGRAPHY=Inter font family with tight letter spacing and various weights
+UI_COMPONENTS=Pill-shaped buttons, gradient backgrounds, clean cards, mobile-responsive design
+TARGET_AUDIENCE=Individual freelancers, expats, businesses needing global payments

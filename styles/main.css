@@ -1,0 +1,1010 @@
+/* Force light mode - prevent any dark mode interference */
+html {
+  color-scheme: light !important;
+}
+
+/* Ensure all elements maintain light mode styling */
+* {
+  color-scheme: light !important;
+}
+
+/* Override any potential dark mode styles */
+[data-theme="dark"],
+.dark,
+.dark-mode {
+  background-color: white !important;
+  color: #111827 !important;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.025em;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  /* Add hardware acceleration */
+  transform: translateZ(0);
+  will-change: auto;
+  /* Force light mode colors */
+  background-color: white !important;
+  color: #111827 !important;
+}
+body.loaded {
+  opacity: 1;
+}
+.elegant-gradient {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%) !important;
+  background-color: #000000 !important;
+}
+.elegant-card {
+  background: rgba(255, 255, 255, 0.98);
+  /* Remove expensive backdrop-filter */
+  /* backdrop-filter: blur(20px); */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* Add hardware acceleration */
+  transform: translateZ(0);
+}
+.elegant-text {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.elegant-button {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* Add hardware acceleration */
+  transform: translateZ(0);
+}
+.elegant-button:hover {
+  transform: translateY(-2px) translateZ(0);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+.elegant-border {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.elegant-shadow {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Add hardware acceleration */
+  transform: translateZ(0);
+}
+.elegant-shadow:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+}
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Simplified background patterns - removed expensive ones */
+.geometric-pattern {
+  /* Simplified pattern */
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.02) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.02) 75%);
+  background-size: 100px 100px;
+}
+
+.dot-pattern {
+  /* Subtle dots pattern */
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.wave-pattern {
+  /* Subtle wave pattern */
+  background: linear-gradient(45deg, transparent 40%, rgba(0, 0, 0, 0.01) 50%, transparent 60%);
+  background-size: 100px 100px;
+}
+
+.grid-pattern {
+  /* Replaced with subtle dot pattern */
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* New elegant background patterns */
+.elegant-dots {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+  background-size: 60px 60px, 40px 40px;
+}
+
+.subtle-gradient {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0.01) 100%);
+}
+
+.organic-pattern {
+  background-image: 
+    radial-gradient(ellipse at 20% 20%, rgba(0, 0, 0, 0.01) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(0, 0, 0, 0.01) 0%, transparent 50%),
+    radial-gradient(ellipse at 40% 60%, rgba(0, 0, 0, 0.008) 0%, transparent 50%);
+  background-size: 120px 120px, 80px 80px, 100px 100px;
+}
+
+/* Simplified floating shapes - reduced complexity */
+.floating-shapes {
+  position: relative;
+  overflow: hidden;
+}
+
+.floating-shapes::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01));
+  top: -100px;
+  right: -100px;
+  /* Simplified animation */
+  animation: float-simple 15s ease-in-out infinite;
+  /* Add hardware acceleration */
+  transform: translateZ(0);
+}
+
+/* Remove the second floating shape to reduce GPU load */
+
+@keyframes float-simple {
+  0%, 100% { transform: translateY(0px) translateZ(0); }
+  50% { transform: translateY(-10px) translateZ(0); }
+}
+
+.logo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+}
+
+/* Darker text for better contrast */
+.text-gray-600 {
+  color: #374151 !important;
+}
+
+.text-gray-500 {
+  color: #6b7280 !important;
+}
+
+.text-gray-700 {
+  color: #374151 !important;
+}
+
+/* Hero section specific gradient override */
+.hero-section {
+  background: white !important;
+  background-color: white !important;
+}
+
+/* Optimized loading animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px) translateZ(0);
+  animation: fadeInUp 0.6s ease-out forwards;
+  /* Add hardware acceleration */
+  will-change: opacity, transform;
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.1s;
+}
+
+.fade-in-delay-2 {
+  animation-delay: 0.2s;
+}
+
+.fade-in-delay-3 {
+  animation-delay: 0.3s;
+}
+
+.fade-in-delay-4 {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+/* Optimized feature transitions */
+.feature-display {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Add hardware acceleration */
+  transform: translateZ(0);
+  will-change: opacity, transform;
+}
+
+.feature-item {
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 4px 0;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateZ(0);
+  will-change: transform, box-shadow, background-color;
+}
+
+.feature-item:hover {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.03) 100%);
+  border-color: rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  transform: translateX(4px) translateZ(0);
+}
+
+.feature-item.active {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.03) 0%, rgba(0, 0, 0, 0.06) 100%);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transform: translateX(6px) translateZ(0);
+}
+
+.feature-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.01) 0%, transparent 50%);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.feature-item:hover::before {
+  opacity: 1;
+}
+
+.feature-item .arrow {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #9CA3AF;
+  font-weight: 300;
+}
+
+.feature-item:hover .arrow {
+  color: #374151;
+  transform: translateX(2px) translateZ(0);
+}
+
+.feature-item.active .arrow {
+  color: #000000;
+  transform: translateX(4px) translateZ(0);
+}
+
+.feature-item .title {
+  color: #374151;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  margin-bottom: 0.25rem;
+}
+
+.feature-item:hover .title {
+  color: #000000;
+}
+
+.feature-item.active .title {
+  color: #000000;
+}
+
+.feature-item .description {
+  color: #6B7280;
+  font-weight: 400;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.feature-item:hover .description {
+  color: #4B5563;
+}
+
+.feature-item.active .description {
+  color: #374151;
+}
+
+/* Feature display improvements */
+.feature-display {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.95) 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature-display:hover {
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px) translateZ(0);
+}
+
+/* Circular flag styling */
+.flag-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.flag-circle .fi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.6);
+  transform-origin: center;
+}
+
+/* Small caps styling for feature descriptions */
+.small-caps {
+  font-variant: small-caps;
+  font-feature-settings: "smcp";
+  letter-spacing: 0.08em;
+  word-spacing: 0.1em;
+}
+
+/* Modern pill-shaped button with shading */
+.modern-pill-button {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 50%, #1a202c 100%);
+  color: white;
+  padding: 0.875rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+.modern-pill-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+.modern-pill-button:hover {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #000000 100%);
+  transform: translateY(-1px);
+  box-shadow: 
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.modern-pill-button:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modern-pill-button:focus {
+  outline: none;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Smaller pill button for header */
+.modern-pill-button-sm {
+  background: linear-gradient(135deg, #4a5568 0%, #2d3748 50%, #1a202c 100%);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  border: none;
+  box-shadow: 
+    0 2px 4px -1px rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+.modern-pill-button-sm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+}
+
+.modern-pill-button-sm:hover {
+  background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #000000 100%);
+  transform: translateY(-1px);
+  box-shadow: 
+    0 6px 12px -2px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.modern-pill-button-sm:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 4px -1px rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.06),
+    inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modern-pill-button-sm:focus {
+  outline: none;
+  box-shadow: 
+    0 2px 4px -1px rgba(0, 0, 0, 0.1),
+    0 1px 2px -1px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Subtle pulsing animation for Coming Soon buttons */
+@keyframes subtle-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0 2px 4px -1px rgba(0, 0, 0, 0.06),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 
+      0 8px 16px -2px rgba(0, 0, 0, 0.15),
+      0 4px 8px -1px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ===== RESPONSIVE DESIGN IMPROVEMENTS ===== */
+
+/* Mobile-first responsive typography */
+@media (max-width: 640px) {
+  .text-6xl { font-size: 2.5rem !important; line-height: 1.1 !important; }
+  .text-5xl { font-size: 2.25rem !important; line-height: 1.2 !important; }
+  .text-3xl { font-size: 1.75rem !important; line-height: 1.3 !important; }
+  .text-2xl { font-size: 1.5rem !important; line-height: 1.4 !important; }
+  .text-xl { font-size: 1.125rem !important; line-height: 1.4 !important; }
+  .text-lg { font-size: 1rem !important; line-height: 1.5 !important; }
+  
+  /* Mobile spacing adjustments */
+  .py-24 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .py-16 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .mb-20 { margin-bottom: 2rem !important; }
+  .mb-16 { margin-bottom: 1.5rem !important; }
+  .mb-12 { margin-bottom: 1rem !important; }
+  .mb-8 { margin-bottom: 0.75rem !important; }
+  .mb-6 { margin-bottom: 0.5rem !important; }
+  
+  /* Mobile grid adjustments */
+  .gap-16 { gap: 1.5rem !important; }
+  .gap-12 { gap: 1rem !important; }
+  .gap-8 { gap: 0.75rem !important; }
+  
+  /* Mobile padding adjustments */
+  .p-10 { padding: 1.5rem !important; }
+  .p-8 { padding: 1rem !important; }
+  .px-6 { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .py-3 { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+  
+  /* Mobile button adjustments */
+  .modern-pill-button {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .modern-pill-button-sm {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  /* Mobile flag circles */
+  .flag-circle {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  /* Mobile feature display */
+  .feature-display {
+    min-height: 300px !important;
+    padding: 1rem !important;
+  }
+  
+  /* Mobile card adjustments */
+  .elegant-card {
+    border-radius: 1rem !important;
+  }
+  
+  /* Mobile background elements - reduce size */
+  .floating-shapes::before {
+    width: 120px !important;
+    height: 120px !important;
+    top: -60px !important;
+    right: -60px !important;
+  }
+  
+  /* Mobile hero section adjustments */
+  .hero-section .absolute > div {
+    display: none !important; /* Hide decorative elements on mobile */
+  }
+  
+  /* Mobile feature items */
+  .feature-item {
+    padding: 12px !important;
+    margin: 2px 0 !important;
+  }
+  
+  .feature-item .title {
+    font-size: 0.75rem !important;
+  }
+  
+  .feature-item .description {
+    font-size: 0.7rem !important;
+  }
+  
+  /* Mobile section title improvements */
+  .text-xl {
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.02em !important;
+  }
+  
+  /* Mobile section header spacing */
+  .text-center.mb-16 {
+    margin-bottom: 2rem !important;
+  }
+  
+  .text-center.mb-16 .mb-6 {
+    margin-bottom: 1rem !important;
+  }
+  
+  .text-center.mb-16 .gap-3 {
+    gap: 0.75rem !important;
+  }
+  
+  /* Mobile icon size adjustments for section headers */
+  .text-center.mb-16 .w-14 {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  
+  .text-center.mb-16 .w-7 {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+  
+  /* Ensure text aligns left when wrapping on mobile */
+  @media (max-width: 640px) {
+    .text-center.mb-16 .flex {
+      text-align: left !important;
+    }
+    
+    .text-center.mb-16 h2,
+    .text-center.mb-16 h3 {
+      text-align: left !important;
+    }
+  }
+}
+
+/* Tablet responsive adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .text-6xl { font-size: 3.5rem !important; }
+  .text-5xl { font-size: 3rem !important; }
+  .text-3xl { font-size: 2rem !important; }
+  
+  /* Tablet spacing */
+  .py-24 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+  .gap-16 { gap: 2rem !important; }
+  .gap-12 { gap: 1.5rem !important; }
+  
+  /* Tablet feature display */
+  .feature-display {
+    min-height: 350px !important;
+  }
+  
+  /* Tablet flag circles */
+  .flag-circle {
+    width: 38px !important;
+    height: 38px !important;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1025px) {
+  .text-6xl { font-size: 4rem !important; }
+  .text-5xl { font-size: 3.5rem !important; }
+}
+
+/* Touch-friendly interactions for mobile */
+@media (max-width: 768px) {
+  .feature-item {
+    min-height: 60px !important; /* Larger touch targets */
+    padding: 16px !important;
+  }
+  
+  .feature-item:hover {
+    transform: none !important; /* Disable hover effects on touch devices */
+  }
+  
+  .feature-item.active {
+    transform: none !important;
+  }
+  
+  .elegant-shadow:hover {
+    transform: none !important;
+  }
+  
+  .modern-pill-button:hover {
+    transform: none !important;
+  }
+  
+  .modern-pill-button-sm:hover {
+    transform: none !important;
+  }
+  
+  /* Mobile-friendly FAQ */
+  .faq-question {
+    min-height: 60px !important;
+    padding: 1rem !important;
+  }
+  
+  /* Mobile-friendly flag grid */
+  .flag-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(36px, 1fr)) !important;
+    gap: 0.5rem !important;
+    justify-items: center !important;
+  }
+}
+
+/* Landscape mobile adjustments */
+@media (max-width: 768px) and (orientation: landscape) {
+  .py-24 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+  .py-16 { padding-top: 1.5rem !important; padding-bottom: 1.5rem !important; }
+  
+  .feature-display {
+    min-height: 250px !important;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .geometric-pattern {
+    background-size: 50px 50px !important;
+  }
+  
+  .grid-pattern {
+    background-size: 20px 20px !important;
+  }
+  
+  .elegant-dots {
+    background-size: 30px 30px, 20px 20px !important;
+  }
+  
+  .organic-pattern {
+    background-size: 60px 60px, 40px 40px, 50px 50px !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in,
+  .feature-item,
+  .elegant-shadow,
+  .modern-pill-button,
+  .modern-pill-button-sm {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  .floating-shapes::before {
+    animation: none !important;
+  }
+}
+
+/* Explicit light mode enforcement - prevent dark mode interference */
+@media (prefers-color-scheme: dark) {
+  /* Force light mode styling regardless of system preference */
+  body {
+    background-color: white !important;
+    color: #111827 !important;
+  }
+  
+  .bg-white {
+    background-color: white !important;
+  }
+  
+  .text-gray-900 {
+    color: #111827 !important;
+  }
+  
+  .text-gray-700 {
+    color: #374151 !important;
+  }
+  
+  .text-gray-600 {
+    color: #4B5563 !important;
+  }
+  
+  .text-gray-500 {
+    color: #6B7280 !important;
+  }
+  
+  .text-gray-300 {
+    color: #D1D5DB !important;
+  }
+  
+  /* Ensure all text remains readable in light mode */
+  h1, h2, h3, h4, h5, h6 {
+    color: #111827 !important;
+  }
+  
+  p, span, div {
+    color: inherit !important;
+  }
+  
+  /* Force light mode for specific sections */
+  .hero-section {
+    background: white !important;
+  }
+  
+  .vaporizing-gas {
+    background: black !important;
+  }
+  
+  .black-white-gradient {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #333333 50%, #1a1a1a 75%, #000000 100%) !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  .floating-shapes::before,
+  .geometric-pattern,
+  .grid-pattern,
+  .dot-pattern,
+  .wave-pattern {
+    display: none !important;
+  }
+  
+  .elegant-shadow,
+  .modern-pill-button,
+  .modern-pill-button-sm {
+    box-shadow: none !important;
+  }
+}
+
+/* Vaporizing gas effect for FAQ section */
+.vaporizing-gas {
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.015) 0%, transparent 50%),
+    radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.025) 0%, transparent 50%),
+    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.02) 0%, transparent 50%);
+  background-size: 200px 200px, 150px 150px, 180px 180px, 120px 120px, 160px 160px;
+  animation: gas-drift 20s ease-in-out infinite;
+}
+
+@keyframes gas-drift {
+  0%, 100% {
+    background-position: 
+      0% 0%, 
+      100% 100%, 
+      50% 50%, 
+      100% 0%, 
+      0% 100%;
+  }
+  25% {
+    background-position: 
+      10% 20%, 
+      90% 80%, 
+      60% 40%, 
+      80% 10%, 
+      20% 90%;
+  }
+  50% {
+    background-position: 
+      20% 10%, 
+      80% 90%, 
+      40% 60%, 
+      60% 20%, 
+      40% 80%;
+  }
+  75% {
+    background-position: 
+      10% 30%, 
+      90% 70%, 
+      30% 50%, 
+      70% 30%, 
+      30% 70%;
+  }
+}
+
+/* Single black and white gradient for security section */
+.black-white-gradient {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #333333 50%, #1a1a1a 75%, #000000 100%);
+}
+
+/* Mobile feature display improvements */
+@media (max-width: 768px) {
+  /* Hide the desktop display card on mobile */
+  .feature-display-desktop {
+    display: none !important;
+  }
+  
+  /* Show mobile display cards */
+  .feature-display-mobile {
+    display: block !important;
+  }
+  
+  /* Mobile feature item with integrated display */
+  .feature-item-mobile {
+    position: relative;
+    margin-bottom: 1rem !important;
+  }
+  
+  .feature-item-mobile .feature-display-mobile {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-height: 300px !important;
+  }
+  
+  /* Hide all mobile display cards by default */
+  .feature-display-mobile {
+    display: none !important;
+  }
+  
+  /* Show only the active mobile display card */
+  .feature-item-mobile.active .feature-display-mobile {
+    display: block !important;
+  }
+  
+  /* Mobile feature list container */
+  .feature-list-mobile {
+    display: block !important;
+  }
+  
+  /* Desktop feature list container */
+  .feature-list-desktop {
+    display: none !important;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  /* Show desktop display card */
+  .feature-display-desktop {
+    display: block !important;
+  }
+  
+  /* Hide mobile display cards */
+  .feature-display-mobile {
+    display: none !important;
+  }
+  
+  /* Desktop feature list container */
+  .feature-list-desktop {
+    display: block !important;
+  }
+  
+  /* Mobile feature list container */
+  .feature-list-mobile {
+    display: none !important;
+  }
+  
+  /* Add more top spacing for desktop display cards */
+  .feature-display-desktop .feature-content {
+    padding-top: 3rem !important;
+  }
+  
+  /* Extra spacing for large screens */
+  @media (min-width: 1024px) {
+    .feature-display-desktop .feature-content {
+      padding-top: 4rem !important;
+    }
+  }
+  
+  /* Even more spacing for extra large screens */
+  @media (min-width: 1280px) {
+    .feature-display-desktop .feature-content {
+      padding-top: 5rem !important;
+    }
+  }
+}
+
+/* Touch-friendly interactions for mobile */
+
+/* FAQ Section specific styling to ensure white text */
+.bg-black h2,
+.bg-black .text-white,
+section.bg-black h2,
+section.bg-black .text-white {
+  color: white !important;
+}
+
+/* Specific FAQ heading override */
+#faq-heading,
+.bg-black #faq-heading {
+  color: white !important;
+}
+
+/* Force white text for FAQ section */
+.vaporizing-gas h2,
+.vaporizing-gas .text-white {
+  color: white !important;
+}
+
+/* Additional specificity for FAQ heading */
+section.bg-black.relative.overflow-hidden.vaporizing-gas h2#faq-heading {
+  color: white !important;
+}
+
+/* Security section specific styling to ensure white text */
+.black-white-gradient,
+section.black-white-gradient,
+.black-white-gradient h2,
+.black-white-gradient p,
+.black-white-gradient .text-white,
+.black-white-gradient .text-gray-300 {
+  color: white !important;
+}
+
+/* Force white text for security section on all devices */
+section.py-24.px-4.text-white.relative.overflow-hidden.black-white-gradient h2,
+section.py-24.px-4.text-white.relative.overflow-hidden.black-white-gradient p,
+section.py-24.px-4.text-white.relative.overflow-hidden.black-white-gradient .text-white,
+section.py-24.px-4.text-white.relative.overflow-hidden.black-white-gradient .text-gray-300 {
+  color: white !important;
+}
+
+/* Mobile-specific security section text color enforcement */
+@media (max-width: 768px) {
+  .black-white-gradient h2,
+  .black-white-gradient p,
+  .black-white-gradient .text-white,
+  .black-white-gradient .text-gray-300,
+  section.black-white-gradient h2,
+  section.black-white-gradient p,
+  section.black-white-gradient .text-white,
+  section.black-white-gradient .text-gray-300 {
+    color: white !important;
+  }
+}
