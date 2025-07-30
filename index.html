@@ -198,8 +198,7 @@
       </main>
     </div>
 
-    <!-- Banner Section -->
-    <div id="banner-section"></div>
+
 
     <div id="audience-section"></div>
 
@@ -233,7 +232,6 @@
         // Load all sections
         Promise.all([
           loadSection('hero-section', 'herosection2.html'),
-          loadSection('banner-section', 'bannersection.html'),
           loadSection('audience-section', 'audiencesection.html'),
           loadSection('individuals-section', 'individualsection.html'),
           loadSection('businesses-section', 'businesssection.html'),
@@ -317,20 +315,66 @@
               display.style.transform = 'scale(0.98) translateZ(0)';
               
               setTimeout(() => {
-                display.innerHTML = `
-                  <div class="w-24 h-24 ${feature.color} rounded-2xl mx-auto mb-8 flex items-center justify-center">
-                    <i data-lucide="${feature.icon}" class="w-12 h-12 text-white"></i>
-                  </div>
-                  <h3 class="font-bold text-xl mb-8 tracking-tight">${feature.title}</h3>
-                  <div class="space-y-3 text-sm text-gray-500 max-w-xs mx-auto">
-                    ${feature.bullets ? feature.bullets.map(bullet => `
-                      <div class="flex items-center gap-3">
-                        <i data-lucide="check" class="w-4 h-4 text-green-500 flex-shrink-0"></i>
-                        <span class="font-light tracking-wide">${bullet}</span>
-                      </div>
-                    `).join('') : ''}
-                  </div>
-                `;
+                // Special handling for Payment Links feature
+                if (feature.title === 'Payment Links') {
+                  // Remove ALL spacing and make image touch the top
+                  const container = display.closest('.feature-display');
+                  if (container) {
+                    // Remove all padding from container
+                    container.classList.remove('p-4', 'md:p-6', 'lg:p-8');
+                    container.classList.add('p-0');
+                    // Override the flex centering to align to top
+                    container.classList.remove('items-center');
+                    container.classList.add('items-start');
+                  }
+                  
+                  // Remove all padding and margins from display
+                  display.style.padding = '0';
+                  display.style.margin = '0';
+                  
+                  display.innerHTML = `
+                    <img src="img/payment_request.svg" alt="Payment Links" class="w-full h-auto max-h-[300px] md:max-h-[400px] object-contain mb-4 md:mb-6 mx-auto -mt-4 md:-mt-6 lg:-mt-8">
+                    <div class="flex flex-wrap justify-center gap-4 md:gap-6 text-sm text-gray-500 max-w-md mx-auto">
+                      ${feature.bullets ? feature.bullets.map(bullet => `
+                        <div class="flex items-center gap-2">
+                          <i data-lucide="check" class="w-4 h-4 text-green-500 flex-shrink-0"></i>
+                          <span class="font-light tracking-wide">${bullet}</span>
+                        </div>
+                      `).join('') : ''}
+                    </div>
+                  `;
+                } else {
+                  // Reset padding for other features
+                  const container = display.closest('.feature-display');
+                  if (container) {
+                    // Reset all padding classes
+                    container.classList.remove('p-0');
+                    container.classList.add('p-4', 'md:p-6', 'lg:p-8');
+                    // Reset the flex centering for other features
+                    container.classList.remove('items-start');
+                    container.classList.add('items-center');
+                  }
+                  
+                  // Reset all padding and margins for other features
+                  display.style.padding = '';
+                  display.style.margin = '';
+                  
+                  // Default handling for other features
+                  display.innerHTML = `
+                    <div class="w-24 h-24 ${feature.color} rounded-2xl mx-auto mb-8 flex items-center justify-center">
+                      <i data-lucide="${feature.icon}" class="w-12 h-12 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-8 tracking-tight">${feature.title}</h3>
+                    <div class="space-y-3 text-sm text-gray-500 max-w-xs mx-auto">
+                      ${feature.bullets ? feature.bullets.map(bullet => `
+                        <div class="flex items-center gap-3">
+                          <i data-lucide="check" class="w-4 h-4 text-green-500 flex-shrink-0"></i>
+                          <span class="font-light tracking-wide">${bullet}</span>
+                        </div>
+                      `).join('') : ''}
+                    </div>
+                  `;
+                }
                 
                 // Reinitialize icons for the new content
                 lucide.createIcons();

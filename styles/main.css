@@ -953,6 +953,11 @@ section.bg-black .text-white {
   color: white !important;
 }
 
+/* Force black color for FAQ heading in new design */
+#faq-heading {
+  color: black !important;
+}
+
 /* Force white text for FAQ section */
 .vaporizing-gas h2,
 .vaporizing-gas .text-white {
