@@ -348,6 +348,11 @@ body.loaded {
   word-spacing: 0.1em;
 }
 
+/* Primary color text class */
+.text-primary {
+  color: #1356F7 !important;
+}
+
 /* Modern pill-shaped button with blue gradient */
 .modern-pill-button {
   background: linear-gradient(0deg, #1356F7, #1356F7),
