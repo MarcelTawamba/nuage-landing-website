@@ -2,37 +2,42 @@
 (function() {
   // Define header template
   const headerTemplate = `
-    <nav class="relative z-50 py-4 md:py-6 px-4 bg-white border-b border-gray-200">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <!-- Logo -->
-        <div class="flex items-center space-x-2 md:space-x-3">
-          <a href="index.html" class="flex items-center space-x-2 md:space-x-3 hover:opacity-80 transition-opacity">
-            <img src="img/logo.svg" alt="{{COMPANY_NAME}}" class="h-8 md:h-10 w-auto">
-          </a>
-        </div>
-        
-        <!-- Navigation Links - Hidden on mobile -->
-        <div class="hidden md:flex items-center space-x-6 md:space-x-8">
-          <a href="#individuals" class="text-gray-600 hover:text-gray-900 transition-colors font-medium tracking-wide cursor-pointer text-sm md:text-base">INDIVIDUAL</a>
-          <a href="#businesses" class="text-gray-600 hover:text-gray-900 transition-colors font-medium tracking-wide cursor-pointer text-sm md:text-base">BUSINESS</a>
-        </div>
-        
-        <!-- CTA Buttons -->
-        <div class="flex items-center space-x-3 md:space-x-4">
-          <a href="{{SIGN_IN_URL}}" class="modern-pill-button-sm text-xs md:text-sm">SIGN IN</a>
+    <nav class="relative z-50 py-6 px-6">
+      <div class="max-w-4xl mx-auto">
+        <!-- Rounded Navigation Container -->
+        <div class="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+              <img src="img/logo.png" alt="Nuage" class="h-7 w-auto">
+            </a>
+          </div>
           
-          <!-- Mobile menu button - visible only on mobile -->
-          <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" id="mobile-menu-button">
-            <i data-lucide="menu" class="w-5 h-5 text-gray-600"></i>
-          </button>
+          <!-- Navigation Links - Hidden on mobile -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#individuals" class="text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm">Individual</a>
+            <a href="#businesses" class="text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm">Business</a>
+          </div>
+          
+          <!-- Sign In Button -->
+          <div class="flex items-center">
+            <a href="https://app.nuage.money/" class="modern-pill-button-sm">
+              SIGN IN
+            </a>
+            
+            <!-- Mobile menu button - visible only on mobile -->
+            <button class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors ml-3" id="mobile-menu-button">
+              <i data-lucide="menu" class="w-4 h-4 text-gray-600"></i>
+            </button>
+          </div>
         </div>
-      </div>
-      
-      <!-- Mobile menu - hidden by default -->
-      <div class="md:hidden hidden" id="mobile-menu">
-        <div class="px-4 py-4 space-y-4 border-t border-gray-200 mt-4">
-          <a href="#individuals" class="block text-gray-600 hover:text-gray-900 transition-colors font-medium tracking-wide cursor-pointer text-base py-2">INDIVIDUAL</a>
-          <a href="#businesses" class="block text-gray-600 hover:text-gray-900 transition-colors font-medium tracking-wide cursor-pointer text-base py-2">BUSINESS</a>
+        
+        <!-- Mobile menu - hidden by default -->
+        <div class="md:hidden hidden mt-4" id="mobile-menu">
+          <div class="bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl px-6 py-4 space-y-3 shadow-sm">
+            <a href="#individuals" class="block text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm py-2">Individual</a>
+            <a href="#businesses" class="block text-gray-700 hover:text-gray-900 transition-colors font-medium text-sm py-2">Business</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -40,14 +45,14 @@
 
   // Define footer template
   const footerTemplate = `
-    <footer class="bg-black text-white py-12 md:py-16 px-4">
+    <footer class="py-12 md:py-16 px-4 text-white" style="background: linear-gradient(135deg, #1356F7 0%, #0d47d4 50%, #0a3bb8 100%);">
       <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 gap-8">
           <!-- Company Info -->
           <div>
-            <div class="flex items-center space-x-2 md:space-x-3 mb-4 md:mb-6">
-              <a href="index.html" class="flex items-center space-x-2 md:space-x-3 hover:opacity-80 transition-opacity">
-                <img src="img/logo.svg" alt="{{COMPANY_NAME}}" class="h-8 md:h-10 w-auto filter brightness-0 invert">
+            <div class="flex items-center mb-4 md:mb-6">
+              <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                <img src="img/logo.png" alt="Nuage" class="h-8 md:h-10 w-auto filter brightness-0 invert">
               </a>
             </div>
             <p class="text-sm md:text-base text-gray-400 mb-4 md:mb-6 max-w-md leading-relaxed">
@@ -68,7 +73,7 @@
         <div class="border-t border-gray-800 mt-8 md:mt-12 pt-6 md:pt-8">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <p class="text-gray-400 text-xs md:text-sm mb-4 md:mb-0">
-              © {{YEAR}} {{COMPANY_NAME}}. All rights reserved.
+              © 2025 Nuage. All rights reserved.
             </p>
             <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-xs md:text-sm text-gray-400">
               <a href="terms.html" class="hover:text-white transition-colors tracking-wide">TERMS OF SERVICE</a>

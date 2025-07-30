@@ -1,11 +1,11 @@
 {
-  "name": "{{COMPANY_NAME}} - {{APP_DESCRIPTION}}",
-  "short_name": "{{COMPANY_NAME}}",
-  "description": "{{COMPANY_DESCRIPTION}}",
+  "name": "Nuage - Global Money Account",
+  "short_name": "Nuage",
+  "description": "Open a USD or EUR account, send and receive payments in 100+ countries.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#000000",
+  "theme_color": "#1356F7",
   "orientation": "portrait-primary",
   "icons": [
     {

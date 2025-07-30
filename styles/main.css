@@ -24,16 +24,17 @@ body {
   /* Add hardware acceleration */
   transform: translateZ(0);
   will-change: auto;
-  /* Force light mode colors */
-  background-color: white !important;
+  /* White background */
+  background-color: white;
   color: #111827 !important;
+  min-height: 100vh;
 }
 body.loaded {
   opacity: 1;
 }
 .elegant-gradient {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%) !important;
-  background-color: #000000 !important;
+  background: linear-gradient(135deg, #1356F7 0%, #0d47d4 50%, #0a3bb8 100%) !important;
+  background-color: #1356F7 !important;
 }
 .elegant-card {
   background: rgba(255, 255, 255, 0.98);
@@ -44,7 +45,7 @@ body.loaded {
   transform: translateZ(0);
 }
 .elegant-text {
-  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  background: linear-gradient(135deg, #1356F7 0%, #0d47d4 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -97,36 +98,31 @@ body.loaded {
 .wave-pattern {
   /* Subtle wave pattern */
   background: linear-gradient(45deg, transparent 40%, rgba(0, 0, 0, 0.01) 50%, transparent 60%);
-  background-size: 100px 100px;
+  background-size: 60px 60px;
 }
 
 .grid-pattern {
-  /* Replaced with subtle dot pattern */
-  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
-  background-size: 40px 40px;
+  /* Subtle grid pattern */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 
-/* New elegant background patterns */
 .elegant-dots {
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.015) 1px, transparent 1px),
-    radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
-  background-size: 60px 60px, 40px 40px;
+  /* Elegant dots pattern */
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 25px 25px;
 }
 
 .subtle-gradient {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.01) 0%, rgba(0, 0, 0, 0.02) 50%, rgba(0, 0, 0, 0.01) 100%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.01) 0%, transparent 100%);
 }
 
 .organic-pattern {
-  background-image: 
-    radial-gradient(ellipse at 20% 20%, rgba(0, 0, 0, 0.01) 0%, transparent 50%),
-    radial-gradient(ellipse at 80% 80%, rgba(0, 0, 0, 0.01) 0%, transparent 50%),
-    radial-gradient(ellipse at 40% 60%, rgba(0, 0, 0, 0.008) 0%, transparent 50%);
-  background-size: 120px 120px, 80px 80px, 100px 100px;
+  /* Organic flowing pattern */
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 0, 0, 0.01) 50%, transparent 70%);
+  background-size: 80px 80px;
 }
 
-/* Simplified floating shapes - reduced complexity */
 .floating-shapes {
   position: relative;
   overflow: hidden;
@@ -135,49 +131,40 @@ body.loaded {
 .floating-shapes::before {
   content: '';
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.01));
-  top: -100px;
-  right: -100px;
-  /* Simplified animation */
-  animation: float-simple 15s ease-in-out infinite;
-  /* Add hardware acceleration */
-  transform: translateZ(0);
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: float-simple 20s linear infinite;
+  pointer-events: none;
 }
 
-/* Remove the second floating shape to reduce GPU load */
-
 @keyframes float-simple {
-  0%, 100% { transform: translateY(0px) translateZ(0); }
-  50% { transform: translateY(-10px) translateZ(0); }
+  0% { transform: translate(0, 0) rotate(0deg); }
+  100% { transform: translate(-50px, -50px) rotate(360deg); }
 }
 
 .logo {
-  font-family: 'Inter', sans-serif;
-  font-weight: 800;
-  font-size: 1.5rem;
-  letter-spacing: -0.05em;
+  transition: opacity 0.2s ease;
 }
 
-/* Darker text for better contrast */
+.logo:hover {
+  opacity: 0.8;
+}
+
+/* Text color utilities */
 .text-gray-600 {
-  color: #374151 !important;
+  color: #4B5563 !important;
 }
 
 .text-gray-500 {
-  color: #6b7280 !important;
+  color: #6B7280 !important;
 }
 
 .text-gray-700 {
   color: #374151 !important;
-}
-
-/* Hero section specific gradient override */
-.hero-section {
-  background: white !important;
-  background-color: white !important;
 }
 
 /* Optimized loading animations */
@@ -361,9 +348,10 @@ body.loaded {
   word-spacing: 0.1em;
 }
 
-/* Modern pill-shaped button with shading */
+/* Modern pill-shaped button with blue gradient */
 .modern-pill-button {
-  background: linear-gradient(135deg, #4a5568 0%, #2d3748 50%, #1a202c 100%);
+  background: linear-gradient(0deg, #1356F7, #1356F7),
+              linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 137.27%);
   color: white;
   padding: 0.875rem 2rem;
   border-radius: 9999px;
@@ -373,13 +361,13 @@ body.loaded {
   text-transform: uppercase;
   border: none;
   box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 4px 6px -1px rgba(19, 86, 247, 0.2),
+    0 2px 4px -1px rgba(19, 86, 247, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  animation: subtle-pulse 3s ease-in-out infinite;
+  animation: subtle-pulse-blue 3s ease-in-out infinite;
 }
 
 .modern-pill-button::before {
@@ -389,38 +377,40 @@ body.loaded {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
 }
 
 .modern-pill-button:hover {
-  background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #000000 100%);
+  background: linear-gradient(0deg, #0d47d4, #0d47d4),
+              linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 137.27%);
   transform: translateY(-1px);
   box-shadow: 
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    0 10px 15px -3px rgba(19, 86, 247, 0.3),
+    0 4px 6px -2px rgba(19, 86, 247, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .modern-pill-button:active {
   transform: translateY(0);
   box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 4px 6px -1px rgba(19, 86, 247, 0.2),
+    0 2px 4px -1px rgba(19, 86, 247, 0.1),
     inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .modern-pill-button:focus {
   outline: none;
   box-shadow: 
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 0 0 3px rgba(255, 255, 255, 0.5);
+    0 4px 6px -1px rgba(19, 86, 247, 0.2),
+    0 2px 4px -1px rgba(19, 86, 247, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 0 3px rgba(19, 86, 247, 0.3);
 }
 
-/* Smaller pill button for header */
+/* Smaller pill button for header with blue gradient */
 .modern-pill-button-sm {
-  background: linear-gradient(135deg, #4a5568 0%, #2d3748 50%, #1a202c 100%);
+  background: linear-gradient(0deg, #1356F7, #1356F7),
+              linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 137.27%);
   color: white;
   padding: 0.5rem 1.25rem;
   border-radius: 9999px;
@@ -430,13 +420,13 @@ body.loaded {
   text-transform: uppercase;
   border: none;
   box-shadow: 
-    0 2px 4px -1px rgba(0, 0, 0, 0.1),
-    0 1px 2px -1px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 2px 4px -1px rgba(19, 86, 247, 0.2),
+    0 1px 2px -1px rgba(19, 86, 247, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  animation: subtle-pulse 3s ease-in-out infinite;
+  animation: subtle-pulse-blue 3s ease-in-out infinite;
 }
 
 .modern-pill-button-sm::before {
@@ -446,48 +436,49 @@ body.loaded {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
 }
 
 .modern-pill-button-sm:hover {
-  background: linear-gradient(135deg, #2d3748 0%, #1a202c 50%, #000000 100%);
+  background: linear-gradient(0deg, #0d47d4, #0d47d4),
+              linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 137.27%);
   transform: translateY(-1px);
   box-shadow: 
-    0 6px 12px -2px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    0 6px 12px -2px rgba(19, 86, 247, 0.3),
+    0 2px 4px -1px rgba(19, 86, 247, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .modern-pill-button-sm:active {
   transform: translateY(0);
   box-shadow: 
-    0 2px 4px -1px rgba(0, 0, 0, 0.1),
-    0 1px 2px -1px rgba(0, 0, 0, 0.06),
+    0 2px 4px -1px rgba(19, 86, 247, 0.2),
+    0 1px 2px -1px rgba(19, 86, 247, 0.1),
     inset 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .modern-pill-button-sm:focus {
   outline: none;
   box-shadow: 
-    0 2px 4px -1px rgba(0, 0, 0, 0.1),
-    0 1px 2px -1px rgba(0, 0, 0, 0.06),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    0 0 0 3px rgba(255, 255, 255, 0.5);
+    0 2px 4px -1px rgba(19, 86, 247, 0.2),
+    0 1px 2px -1px rgba(19, 86, 247, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 0 0 3px rgba(19, 86, 247, 0.3);
 }
 
-/* Subtle pulsing animation for Coming Soon buttons */
-@keyframes subtle-pulse {
+/* Subtle pulsing animation for blue gradient buttons */
+@keyframes subtle-pulse-blue {
   0%, 100% {
     box-shadow: 
-      0 4px 6px -1px rgba(0, 0, 0, 0.1),
-      0 2px 4px -1px rgba(0, 0, 0, 0.06),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      0 4px 6px -1px rgba(19, 86, 247, 0.2),
+      0 2px 4px -1px rgba(19, 86, 247, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
   }
   50% {
     box-shadow: 
-      0 8px 16px -2px rgba(0, 0, 0, 0.15),
-      0 4px 8px -1px rgba(0, 0, 0, 0.1),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      0 8px 16px -2px rgba(19, 86, 247, 0.3),
+      0 4px 8px -1px rgba(19, 86, 247, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -779,10 +770,6 @@ body.loaded {
   }
   
   /* Force light mode for specific sections */
-  .hero-section {
-    background: white !important;
-  }
-  
   .vaporizing-gas {
     background: black !important;
   }
@@ -1007,4 +994,22 @@ section.py-24.px-4.text-white.relative.overflow-hidden.black-white-gradient .tex
   section.black-white-gradient .text-gray-300 {
     color: white !important;
   }
+}
+
+/* Flag circles for hero section */
+.flag-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flag-circle .fi {
+  font-size: 20px;
+  line-height: 1;
 }

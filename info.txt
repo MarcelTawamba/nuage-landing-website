@@ -1,26 +1,28 @@
-COMPANY_NAME=XYZ
+COMPANY_NAME=Nuage
 APP_DESCRIPTION=Global Money Account
-COMPANY_DESCRIPTION=The easiest way to get paid, move money, and hold dollars—wherever you are. Available in 100+ countries with USD/EUR bank accounts, crypto support, and global transfers.
-SITE_URL=https://xyz.com
-SUPPORT_EMAIL=support@xyz.com
-SIGN_IN_URL=https://app.xyz.com
+COMPANY_DESCRIPTION=Open a USD or EUR account, send and receive payments in 100+ countries.
+SITE_URL=https://www.nuage.money/
+SUPPORT_EMAIL=help@nuage.money
+SIGN_IN_URL=https://app.nuage.money/
 YEAR=2025
 
 # Website Style & Branding
 PRIMARY_FONT=Inter
-THEME_COLOR=#000000
+THEME_COLOR=#1356F7
 BACKGROUND_COLOR=#ffffff
 
 # Company Information
-COMPANY_ADDRESS_COUNTRY=US
-COMPANY_ADDRESS=2093 Philadelphia Pike #1991, Claymont, DE 19703
-COMPANY_FOUNDING_DATE=2024
-TWITTER_HANDLE=@xyz
-LINKEDIN_URL=https://linkedin.com/company/xyz
+COMPANY_ADDRESS_COUNTRY=TBC
+COMPANY_ADDRESS=TBC
+COMPANY_FOUNDING_DATE=2025
+FACEBOOK_URL=https://www.facebook.com/NuageMoney/
+TIKTOK_URL=https://www.tiktok.com/@nuagemoney
+TWITTER_HANDLE=TBC
+LINKEDIN_URL=https://www.linkedin.com/company/nuagemoney/
 
 # Website Concept
-STYLE_CONCEPT=Modern, clean fintech design with elegant gradients and pill-shaped buttons
-COLOR_SCHEME=Black and white with gray accents, minimal and professional
-TYPOGRAPHY=Inter font family with tight letter spacing and various weights
-UI_COMPONENTS=Pill-shaped buttons, gradient backgrounds, clean cards, mobile-responsive design
-TARGET_AUDIENCE=Individual freelancers, expats, businesses needing global payments
+STYLE_CONCEPT: A modern, clean fintech design that balances professionalism with approachability. The layout uses generous whitespace, structured sections, and soft, rounded elements for a premium yet user‑friendly feel. Subtle gradients and visual hierarchy make the interface engaging without clutter.
+COLOR_SCHEME: A primary blue and white palette with soft gray accents. Gradients are used sparingly for buttons and highlights, creating a sleek, trustworthy aesthetic that resonates with fintech users.
+TYPOGRAPHY: Inter font family throughout, with tight letter spacing and a clear typographic scale for headings, subheadings, and body text. Weight variations (regular, medium, bold) provide excellent readability and emphasis across sections.
+UI_COMPONENTS: Pill‑shaped buttons, clean modular cards, icon‑driven navigation, and intuitive forms. Visuals such as dashboard mockups, device renders, and lifestyle imagery help ground abstract fintech features in real‑world usage. Fully mobile‑responsive with smooth scaling across screen sizes.
+TARGET_AUDIENCE: Individual freelancers, expats, and businesses that need reliable, global money movement solutions. The visual tone inspires trust and professionalism while remaining friendly and approachable to non‑technical users.
