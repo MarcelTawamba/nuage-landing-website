@@ -45,8 +45,8 @@
     <meta property="twitter:title" content="Nuage - Global Money Account | Send, Receive & Hold Dollars Worldwide">
     <meta property="twitter:description" content="The easiest way to get paid, move money, and hold dollars—wherever you are. Available in 100+ countries with USD/EUR bank accounts, crypto support, and global transfers.">
     <meta property="twitter:image" content="https://www.nuage.money/twitter-image.jpg">
-    <meta property="twitter:site" content="TBC">
-    <meta property="twitter:creator" content="TBC">
+    <meta property="twitter:site" content="@NuageMoney">
+    <meta property="twitter:creator" content="@NuageMoney">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#1356F7">
@@ -68,7 +68,7 @@
       "logo": "https://www.nuage.money/img/logo.png",
 "image": "https://www.nuage.money/img/hero.png",
       "sameAs": [
-        "https://twitter.com/TBC",
+        "https://www.facebook.com/NuageMoney/",
         "https://www.linkedin.com/company/nuagemoney/"
       ],
       "address": {
@@ -131,7 +131,7 @@
         "email": "help@nuage.money"
       },
       "sameAs": [
-        "https://twitter.com/TBC",
+        "https://www.facebook.com/NuageMoney/",
         "https://www.linkedin.com/company/nuagemoney/"
       ]
     }
@@ -198,8 +198,6 @@
       </main>
     </div>
 
-
-
     <div id="audience-section"></div>
 
     <div id="individuals-section"></div>
@@ -211,8 +209,6 @@
     <div id="cta-section"></div>
 
     <div id="faq-section"></div>
-
-    <div id="feature-section-1"></div>
 
     <script>
       // Wait for DOM to be fully loaded
@@ -234,7 +230,6 @@
         // Load all sections
         Promise.all([
           loadSection('hero-section', 'herosection2.html'),
-          loadSection('feature-section-1', 'featuresection1.html'),
           loadSection('audience-section', 'audiencesection.html'),
           loadSection('individuals-section', 'individualsection.html'),
           loadSection('businesses-section', 'businesssection.html'),
@@ -250,10 +245,6 @@
           initializeFAQFunctionality();
           initializeNavigation();
           
-          // Initialize individual section if it has its own initialization
-          if (typeof window.initializeIndividualSection === 'function') {
-            window.initializeIndividualSection();
-          }
         });
 
         // Initialize feature functionality after sections are loaded
@@ -436,47 +427,6 @@
             });
           });
 
-          // Mobile feature functionality
-          const mobileBusinessItems = document.querySelectorAll('.feature-item-mobile[data-feature]');
-          
-
-          // Mobile business features
-          mobileBusinessItems.forEach(item => {
-            item.addEventListener('click', function() {
-              const featureKey = this.getAttribute('data-feature');
-              
-              // Close all other mobile feature displays
-              mobileBusinessItems.forEach(fi => {
-                fi.classList.remove('active');
-                const arrow = fi.querySelector('.arrow');
-                if (arrow) {
-                  arrow.style.transform = 'rotate(0deg)';
-                }
-              });
-              
-              // Toggle current item
-              this.classList.toggle('active');
-              
-              // Update arrow rotation
-              const arrow = this.querySelector('.arrow');
-              if (arrow) {
-                if (this.classList.contains('active')) {
-                  arrow.style.transform = 'rotate(90deg)';
-                } else {
-                  arrow.style.transform = 'rotate(0deg)';
-                }
-              }
-            });
-          });
-
-          // Set initial active state for mobile business features
-          if (mobileBusinessItems.length > 0) {
-            mobileBusinessItems[0].classList.add('active');
-            const firstArrow = mobileBusinessItems[0].querySelector('.arrow');
-            if (firstArrow) {
-              firstArrow.style.transform = 'rotate(90deg)';
-            }
-          }
 
           // Set initial active states
           if (individualItems.length > 0) {

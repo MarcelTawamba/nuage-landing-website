@@ -45,47 +45,46 @@
 
   // Define footer template
   const footerTemplate = `
-    <footer class="pt-8 md:pt-12 pb-24 md:pb-36 px-4 text-white relative overflow-hidden" style="background: linear-gradient(135deg, #1356F7 0%, #0d47d4 50%, #0a3bb8 100%);">
+    <footer class="pt-12 md:pt-16 pb-8 md:pb-12 px-6 md:px-4 text-white relative overflow-hidden" style="background: linear-gradient(135deg, #1356F7 0%, #0d47d4 50%, #0a3bb8 100%);">
       <!-- Large faded logo background -->
       <div class="absolute inset-0 flex items-end justify-center opacity-10" style="bottom: -10%;">
         <img src="img/footer_logo.svg" alt="Nuage" class="w-full max-w-7xl h-auto object-contain">
       </div>
       
       <div class="max-w-7xl mx-auto relative z-10">
-        <div class="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-12">
+        <div class="flex flex-col md:flex-row justify-between items-start gap-12 md:gap-16">
           <!-- Company Info -->
-          <div class="flex-1">
-            <div class="flex items-center mb-6 md:mb-8">
+          <div class="flex-1 w-full">
+            <div class="flex items-center mb-8 md:mb-10">
               <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
-                <img src="img/logo.png" alt="Nuage" class="h-8 md:h-10 w-auto filter brightness-0 invert">
+                <img src="img/logo.png" alt="Nuage" class="h-9 md:h-10 w-auto filter brightness-0 invert">
               </a>
             </div>
-            <p class="text-sm md:text-base text-gray-400 mb-6 md:mb-8 max-w-md leading-relaxed">
+            <p class="text-base md:text-lg text-gray-300 mb-8 md:mb-10 max-w-md leading-relaxed font-light">
               The easiest way to get paid, move money, and hold dollars—wherever you are. Available in 100+ countries worldwide.
             </p>
-            <div class="flex space-x-6">
-              <a href="https://www.facebook.com/NuageMoney/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-                <i data-lucide="facebook" class="w-5 md:w-6 h-5 md:h-6"></i>
+            <div class="flex space-x-8 mb-8 md:mb-0">
+              <a href="https://www.facebook.com/NuageMoney/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="facebook" class="w-6 md:w-7 h-6 md:h-7"></i>
               </a>
-              <a href="https://www.linkedin.com/company/nuagemoney/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
-                <i data-lucide="linkedin" class="w-5 md:w-6 h-5 md:h-6"></i>
+              <a href="https://www.linkedin.com/company/nuagemoney/" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-white transition-colors">
+                <i data-lucide="linkedin" class="w-6 md:w-7 h-6 md:h-7"></i>
               </a>
             </div>
           </div>
 
           <!-- Legal Links Column -->
-          <div class="flex flex-col space-y-3 text-xs md:text-sm text-gray-400 text-right">
-            <a href="terms.html" class="hover:text-white transition-colors tracking-wide">TERMS OF SERVICE</a>
-            <a href="privacy.html" class="hover:text-white transition-colors tracking-wide">PRIVACY POLICY</a>
+          <div class="flex flex-col space-y-4 md:space-y-3 text-sm md:text-sm text-gray-300 text-left md:text-right">
+            <a href="terms.html" class="hover:text-white transition-colors tracking-wide font-medium">TERMS OF SERVICE</a>
+            <a href="privacy.html" class="hover:text-white transition-colors tracking-wide font-medium">PRIVACY POLICY</a>
           </div>
         </div>
 
         <!-- Bottom Section -->
-        <div class="mt-6 md:mt-8 pt-4 md:pt-6">
-          <p class="text-gray-400 text-xs md:text-sm">
+        <div class="border-t border-white/10 mt-12 md:mt-16 pt-8 md:pt-10">
+          <p class="text-gray-300 text-sm md:text-base text-center md:text-left">
             © 2025 Nuage. All rights reserved.
           </p>
-        </div>
         </div>
       </div>
     </footer>

@@ -944,6 +944,50 @@ body.loaded {
 
 /* Touch-friendly interactions for mobile */
 
+/* Horizontal scroll for hero image on mobile */
+.hero-section .overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+.hero-section .overflow-x-auto::-webkit-scrollbar {
+  height: 4px;
+}
+
+.hero-section .overflow-x-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.hero-section .overflow-x-auto::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+/* Subtle edge shadows to indicate scrollability on mobile */
+@media (max-width: 768px) {
+  .hero-section .overflow-x-auto::before,
+  .hero-section .overflow-x-auto::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .hero-section .overflow-x-auto::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+  }
+  
+  .hero-section .overflow-x-auto::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+  }
+}
+
 /* FAQ Section specific styling to ensure white text */
 .bg-black h2,
 .bg-black .text-white,

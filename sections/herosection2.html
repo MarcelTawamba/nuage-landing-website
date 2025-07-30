@@ -5,7 +5,7 @@
             <!-- Badge -->
             <div class="inline-flex items-center px-4 py-2 mb-8 bg-white/70 backdrop-blur-sm text-blue-600 rounded-full text-sm font-medium border border-blue-200">
               <i data-lucide="globe" class="w-4 h-4 mr-2"></i>
-              Simplifying stablecoins for everyone, making it easier than ever.
+              Simplifying global money management
             </div>
             
             <!-- Main Headline -->
@@ -25,9 +25,6 @@
                 Apply
                 <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
               </a>
-              <a href="mailto:help@nuage.money" class="border border-gray-300 text-gray-700 px-8 py-3 rounded-full font-semibold text-base hover:bg-white/50 transition-colors">
-                Contact Us
-              </a>
             </div>
             
             <!-- Countries -->
@@ -46,19 +43,20 @@
                 <div class="flag-circle" role="listitem" aria-label="Canada">
                   <span class="fi fi-ca" aria-hidden="true"></span>
                 </div>
-                <div class="flag-circle" role="listitem" aria-label="South Africa">
+                <!-- Hidden on mobile, shown on desktop -->
+                <div class="flag-circle hidden md:block" role="listitem" aria-label="South Africa">
                   <span class="fi fi-za" aria-hidden="true"></span>
                 </div>
-                <div class="flag-circle" role="listitem" aria-label="Nigeria">
+                <div class="flag-circle hidden md:block" role="listitem" aria-label="Nigeria">
                   <span class="fi fi-ng" aria-hidden="true"></span>
                 </div>
-                <div class="flag-circle" role="listitem" aria-label="Ghana">
+                <div class="flag-circle hidden md:block" role="listitem" aria-label="Ghana">
                   <span class="fi fi-gh" aria-hidden="true"></span>
                 </div>
-                <div class="flag-circle" role="listitem" aria-label="Cameroon">
+                <div class="flag-circle hidden md:block" role="listitem" aria-label="Cameroon">
                   <span class="fi fi-cm" aria-hidden="true"></span>
                 </div>
-                <div class="flag-circle" role="listitem" aria-label="Kenya">
+                <div class="flag-circle hidden md:block" role="listitem" aria-label="Kenya">
                   <span class="fi fi-ke" aria-hidden="true"></span>
                 </div>
                 <div class="flag-circle" role="listitem" aria-label="And more countries">
@@ -72,10 +70,26 @@
 
           <!-- Dashboard Mockup -->
           <div class="relative max-w-7xl mx-auto">
-            <div class="relative overflow-hidden">
-              <img src="img/hero-wide.png" alt="Nuage Dashboard Interface showing accounts, transactions, and global money management" class="w-full h-auto min-h-[600px] object-cover">
-              <!-- White overlay that fades from bottom to transparent -->
-              <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-white/100 via-white/100 via-white/95 via-white/80 to-transparent"></div>
+            <!-- Mobile: Horizontal scroll, Desktop: Full width -->
+            <div class="relative overflow-x-auto md:overflow-hidden -mx-6 md:mx-0">
+              <div class="inline-block md:block min-w-[800px] md:min-w-0 relative pl-6 md:pl-0">
+                <img src="img/hero-wide.png" alt="Nuage Dashboard Interface showing accounts, transactions, and global money management" class="w-full h-auto md:min-h-[600px] object-contain md:object-cover">
+                <!-- White overlay that fades from bottom to transparent - full image width -->
+                <div class="absolute bottom-0 left-0 w-full h-1/3 md:h-1/2 bg-gradient-to-t from-white/100 via-white/95 to-transparent"></div>
+              </div>
+              
+              <!-- Mobile scroll hint -->
+              <div class="md:hidden absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full animate-pulse">
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </div>
+            </div>
+            
+            <!-- Mobile scroll indicator -->
+            <div class="md:hidden text-center mt-4 text-sm text-gray-500">
+              <span class="inline-flex items-center gap-2">
+                <i data-lucide="move-horizontal" class="w-4 h-4"></i>
+                Swipe to explore the dashboard
+              </span>
             </div>
           </div>
         </div>
