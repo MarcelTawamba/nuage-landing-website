@@ -90,6 +90,19 @@
           <p class="text-gray-300 text-sm md:text-base text-center md:text-left">
             © 2025 Nuage. All rights reserved.
           </p>
+          
+          <!-- Regulatory Information -->
+          <div class="mt-6 text-gray-300 text-xs md:text-sm text-center md:text-left leading-relaxed">
+            <p class="mb-2">
+              Nuage Payment Canada Limited (reg. number 1000710387) is a company incorporated in Ontario, Canada at 55 University Avenue, Suite 1100, Toronto, Ontario M5J 2H7
+            </p>
+            <p class="mb-2">
+              Nuage Payments Canada Limited is registered and regulated by Financial Transactions and Report Analysis Centre (FINTRAC), Canada as a Money Service Business. MSB registration number: C100000046.
+            </p>
+            <p>
+              Nuage Payment Canada Limited a financial technology services provider, not a bank
+            </p>
+          </div>
         </div>
       </div>
     </footer>
