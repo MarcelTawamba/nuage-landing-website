@@ -176,6 +176,19 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="js/components.js"></script>
     
+    <!-- Intercom Script -->
+    <script>
+      window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "df2e4997",
+      };
+    </script>
+
+    <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/df2e4997'
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/df2e4997';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+    
     <!-- Preload critical resources -->
     <link rel="preload" href="img/hero.png" as="image">
     <link rel="preload" href="favicon/favicon.ico" as="image">
@@ -206,9 +219,13 @@
 
     <div id="dark-promotion-section"></div>
 
+    <div id="rewards-section"></div>
+
     <div id="cta-section"></div>
 
     <div id="faq-section"></div>
+
+    <div id="feature-section-1"></div>
 
     <script>
       // Wait for DOM to be fully loaded
@@ -234,8 +251,10 @@
           loadSection('individuals-section', 'individualsection.html'),
           loadSection('businesses-section', 'businesssection.html'),
           loadSection('dark-promotion-section', 'darkpromotionsection.html'),
+          loadSection('rewards-section', 'rewardssection.html'),
           loadSection('cta-section', 'ctasection.html'),
-          loadSection('faq-section', 'faqsection.html')
+          loadSection('faq-section', 'faqsection.html'),
+          loadSection('feature-section-1', 'featuresection1.html')
         ]).then(() => {
           // Reinitialize icons after all sections are loaded
           lucide.createIcons();
