@@ -170,10 +170,10 @@
     </script>
     
     <!-- External Resources -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="https://unpkg.com/lucide@0.546.0"></script>
     <script src="js/components.js"></script>
     
     <!-- Intercom Script -->
@@ -228,19 +228,43 @@
     <div id="feature-section-1"></div>
 
     <script>
+      // Fallback timeout to show page even if sections fail to load
+      setTimeout(function() {
+        if (!document.body.classList.contains('loaded')) {
+          console.warn('Forcing page to show after timeout');
+          document.body.classList.add('loaded');
+        }
+      }, 2000);
+
       // Wait for DOM to be fully loaded
       document.addEventListener('DOMContentLoaded', function() {
-        // Initialize Lucide icons
-        lucide.createIcons();
-        
+        // Initialize Lucide icons if available
+        if (typeof lucide !== 'undefined' && lucide.createIcons) {
+          lucide.createIcons();
+          console.log('Lucide icons initialized');
+        } else {
+          console.error('Lucide not loaded properly');
+        }
+
         // Load sections dynamically
         async function loadSection(sectionId, filename) {
           try {
+            console.log(`Loading section: ${filename} into ${sectionId}`);
             const response = await fetch(`sections/${filename}`);
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
             const html = await response.text();
-            document.getElementById(sectionId).innerHTML = html;
+            const element = document.getElementById(sectionId);
+            if (element) {
+              element.innerHTML = html;
+              console.log(`Section ${filename} loaded successfully`);
+            } else {
+              console.error(`Element ${sectionId} not found`);
+            }
           } catch (error) {
             console.error(`Error loading ${filename}:`, error);
+            // Continue even if one section fails
           }
         }
 
@@ -256,14 +280,23 @@
           loadSection('faq-section', 'faqsection.html'),
           loadSection('feature-section-1', 'featuresection1.html')
         ]).then(() => {
+          console.log('All sections loaded, initializing functionality...');
+
           // Reinitialize icons after all sections are loaded
-          lucide.createIcons();
-          
+          if (typeof lucide !== 'undefined' && lucide.createIcons) {
+            lucide.createIcons();
+            console.log('Lucide icons reinitialized');
+          }
+
           // Initialize all interactive functionality after sections are loaded
           initializeFeatureFunctionality();
           initializeFAQFunctionality();
           initializeNavigation();
-          
+
+        }).catch((error) => {
+          console.error('Error during section loading:', error);
+          // Show page anyway
+          document.body.classList.add('loaded');
         });
 
         // Initialize feature functionality after sections are loaded
