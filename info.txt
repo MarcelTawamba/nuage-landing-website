@@ -17,7 +17,7 @@ COMPANY_ADDRESS=TBC
 COMPANY_FOUNDING_DATE=2025
 FACEBOOK_URL=https://www.facebook.com/NuageMoney/
 TIKTOK_URL=https://www.tiktok.com/@nuagemoney
-TWITTER_HANDLE=TBC
+TWITTER_HANDLE=https://www.x.com/nuagemoney
 LINKEDIN_URL=https://www.linkedin.com/company/nuagemoney/
 
 # Website Concept
