@@ -21,9 +21,6 @@ body {
   letter-spacing: -0.025em;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
-  /* Add hardware acceleration */
-  transform: translateZ(0);
-  will-change: auto;
   /* White background */
   background-color: white;
   color: #111827 !important;
@@ -1067,3 +1064,12 @@ section.py-24.px-4.text-white.relative.overflow-hidden.black-white-gradient .tex
   font-size: 20px;
   line-height: 1;
 }
+
+ .intercom-lightweight-app {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 9999 !important;
+}
+
+

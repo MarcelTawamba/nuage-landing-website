@@ -87,6 +87,7 @@
           <div class="flex flex-col space-y-4 md:space-y-3 text-sm md:text-sm text-gray-300 text-left md:text-right">
             <a href="terms.html" class="hover:text-white transition-colors tracking-wide font-medium">TERMS OF SERVICE</a>
             <a href="privacy.html" class="hover:text-white transition-colors tracking-wide font-medium">PRIVACY POLICY</a>
+            <a href="faq.html" class="hover:text-white transition-colors tracking-wide font-medium">FAQ</a>
           </div>
         </div>
 
