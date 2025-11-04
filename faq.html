@@ -17,6 +17,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="js/components.js"></script>
+
+    <!-- Intercom Script -->
+    <script>
+      window.intercomSettings = {
+        api_base: "https://api-iam.intercom.io",
+        app_id: "df2e4997",
+      };
+    </script>
+
+    <script>
+      // We pre-filled your app ID in the widget URL: 'https://widget.intercom.io/widget/df2e4997'
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/df2e4997';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -203,131 +217,140 @@
     </style>
   </head>
   <body class="bg-white text-gray-900">
-    <!-- Header Placeholder -->
-    <div id="header-placeholder"></div>
+    <!-- Hero Section with Gradient Container -->
+    <div style="background: linear-gradient(to bottom, rgba(19, 86, 247, 0.25) 0%, rgba(19, 86, 247, 0.15) 15%, rgba(19, 86, 247, 0.08) 30%, rgba(19, 86, 247, 0.04) 45%, rgba(19, 86, 247, 0.02) 55%, rgba(255, 255, 255, 0.95) 70%, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);">
+      <!-- Header Placeholder -->
+      <header id="header-placeholder" role="banner"></header>
 
-    <!-- Header -->
-    <section class="py-24 px-4 bg-gray-50">
-      <div class="max-w-4xl mx-auto text-center">
-        <h1 class="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-gray-900">
-          FREQUENTLY ASKED QUESTIONS
-        </h1>
-      </div>
-    </section>
-
-    <!-- Content -->
-    <section class="py-16 px-4">
-      <div class="max-w-4xl mx-auto">
-        <div class="prose prose-lg max-w-none">
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">🌍 What countries are supported by Nuage?</h2>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            Nuage global account is open to any individual with a valid Government ID, Passport, Resident Permit, or equivalent documentation and for companies registered from all countries excluding those listed below :
-            Afghanistan, Algeria, ,Bangladesh, Belarus, China, Congo, the Democratic Republic, Cuba, Haiti, Iraq, Iran,Lebanon, Libya, Morocco, Mozambique, Myanmar, Nepal, Nicaragua,North Macedonia, North Korea, Pakistan, Qatar, Russian Federation, Somalia, South Sudan, Sudan, Syria, Venezuela, West Bank (Palestinian Territory, Occupied), Yemen.
-          </p>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">💳 How does a Nuage global account work?</h2>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            With Nuage you get:
-          </p>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>USD Virtual Accounts - U.S. bank account and routing numbers issued in your name.</li>
-            <li>SEPA Virtual IBAN - Euro-denominated IBANs for accepting SEPA payments.</li>
-          </ul>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            With these, you can receive and send payments directly via ACH, Wire, SEPA from individuals or businesses in the USA and in the Euro zone.
-          </p>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">💸 Is there a fee to open an account?</h2>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            No. Opening a USD, EUR account with Nuage is completely free. There are also no monthly maintenance fees.
-          </p>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">📥 What are the fees to receive money?</h2>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>ACH: $2 plus 2% of the value.</li>
-            <li>Fedwire: $10 plus 2% of the value</li>
-            <li>SEPA: €2 plus 2% of the value.</li>
-            <li>USDC/EURC deposits: Instant & free</li>
-          </ul>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">📥 What are the fees to send money?</h2>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>ACH: $2 plus 1% of the value.</li>
-            <li>Fedwire: $10 plus 1% of the value</li>
-            <li>SEPA: €2 plus 1% of the value.</li>
-            <li>USDC/EURC withdrawal: $4/€4</li>
-          </ul>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">✅ Supported vs. Unsupported Payments</h2>
-          <h3 class="text-2xl font-semibold mb-4 text-gray-900">Supported Payments:</h3>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>Freelance platforms – Payments from Upwork, Fiverr, Payoneer, Deel, PayPal, Wise, Amazon, Stripe, Airbnb.</li>
-            <li>Business payments – Transfers from a registered business for services provided or salary.</li>
-            <li>Family payments – Transfers from family members with the same last name.</li>
-            <li>Self-transfers – Sending money from your own your bank, fintech app, or brokerage account (e.g. PayPal → Nuage).</li>
-            <li>Friends & third-party payments – Transfers between unrelated people (up to $3,999 per transaction).</li>
-          </ul>
-          <h3 class="text-2xl font-semibold mb-4 text-gray-900">Unsupported Payments:</h3>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            Nuage will suspend accounts if used for the following:
-          </p>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>Refunds (from universities, businesses, etc.)</li>
-            <li>Gambling or darknet-related payments</li>
-            <li>Loans, debt repayments, or lending platforms</li>
-            <li>Adult services or other high-risk industries</li>
-          </ul>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">❌ Why was my payment rejected?</h2>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            Payments can be rejected for several compliance reasons, including:
-          </p>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>Details mismatch – The sender’s info doesn’t match your Nuage account.</li>
-            <li>Payment recall – The sender marked the transfer as unauthorized.</li>
-            <li>Amount exceeds limit – The payment is higher than your account’s permitted limits.</li>
-            <li>Unclear relationship – No clear explanation of sender-beneficiary connection.</li>
-            <li>Unsupported US states – We do not process third-party transfers from Florida, New York, Louisiana, or Alaska.</li>
-            <li>Fraud suspicion – The transaction was flagged as potentially fraudulent.</li>
-          </ul>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            If you believe your payment was wrongly rejected, you can request a manual review by contacting our support team.
-          </p>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">🔢 What are the transaction limits?</h2>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>Peer-to-peer & third-party transfers: Maximum of $3,999 per transaction.</li>
-            <li>Payroll ,freelance & payments: From businesses and platforms (Upwork, Fiverr, PayPal, Wise, etc.) → No limit.</li>
-          </ul>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">⏱️ How long do deposits take?</h2>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>ACH deposits: Same-day or up to 1 business day.</li>
-            <li>Wire transfers: 1–2 business days.</li>
-            <li>USDC/EURC deposits: Instant & free.</li>
-            <li>Crypto withdrawals (USDC/EURC): Instant.</li>
-          </ul>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">🕒 When does Nuage process transactions?</h2>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>Monday to Friday: 9:00 AM – 5:00 PM New York Time (2:00 PM – 10:00 PM GMT).</li>
-            <li>Weekend transactions are processed on Monday morning.</li>
-            <li>US federal banking holidays: Processing resumes the next business day.</li>
-          </ul>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">💵 How can I withdraw funds?</h2>
-          <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
-            <li>Transfer instantly to crypto exchanges or any external wallet in USDC/EURC</li>
-            <li>Withdraw via our OTC Desk to your local bank account or mobile money wallet (Supported in South Africa, Nigeria, Ghana, Cameroon, Republic of Congo, Gabon, Central African Republic, Chad, Equatorial Guinea, Cote d’ivoire, Senegal, Benin, Togo, Niger, Burkina faso, Mali, Guinea-Bissau). Email us our withdraw@nuage.money or send a text to Whatsapp ‪+1 (555) 762‑7491‬</li>
-          </ul>
-
-          <h2 class="text-3xl font-bold mb-6 text-gray-900">🔐 Is my Nuage account secure?</h2>
-          <p class="text-gray-700 mb-8 leading-relaxed">
-            Yes. Your Nuage account is secured. You should activate Two-Factor Authentication and keep your login details secured at all times. Nuage or any of its agents will never ask for your login details.
+      <main role="main">
+        <!-- Header -->
+    <section class="py-24 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl lg:text-6xl font-bold mb-8 tracking-tight text-gray-900">
+            FREQUENTLY ASKED QUESTIONS
+          </h1>
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
+            Last Updated: November 2025
           </p>
         </div>
-      </div>
-    </section>
+      </section>
+  
+      <!-- Content -->
+      <section class="py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="prose prose-lg max-w-none">
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">🌍 What countries are supported by Nuage?</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Nuage global account is open to any individual with a valid Government ID, Passport, Resident Permit, or equivalent documentation and for companies registered from all countries excluding those listed below :
+              Afghanistan, Algeria, ,Bangladesh, Belarus, China, Congo, the Democratic Republic, Cuba, Haiti, Iraq, Iran,Lebanon, Libya, Morocco, Mozambique, Myanmar, Nepal, Nicaragua,North Macedonia, North Korea, Pakistan, Qatar, Russian Federation, Somalia, South Sudan, Sudan, Syria, Venezuela, West Bank (Palestinian Territory, Occupied), Yemen.
+            </p>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">💳 How does a Nuage global account work?</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              With Nuage you get:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>USD Virtual Accounts - U.S. bank account and routing numbers issued in your name.</li>
+              <li>SEPA Virtual IBAN - Euro-denominated IBANs for accepting SEPA payments.</li>
+            </ul>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              With these, you can receive and send payments directly via ACH, Wire, SEPA from individuals or businesses in the USA and in the Euro zone.
+            </p>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">💸 Is there a fee to open an account?</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              No. Opening a USD, EUR account with Nuage is completely free. There are also no monthly maintenance fees.
+            </p>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">📥 What are the fees to receive money?</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>ACH: $2 plus 2% of the value.</li>
+              <li>Fedwire: $10 plus 2% of the value</li>
+              <li>SEPA: €2 plus 2% of the value.</li>
+              <li>USDC/EURC deposits: Instant & free</li>
+            </ul>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">📥 What are the fees to send money?</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>ACH: $2 plus 1% of the value.</li>
+              <li>Fedwire: $10 plus 1% of the value</li>
+              <li>SEPA: €2 plus 1% of the value.</li>
+              <li>USDC/EURC withdrawal: $4/€4</li>
+            </ul>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">✅ Supported vs. Unsupported Payments</h2>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">Supported Payments:</h3>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>Freelance platforms – Payments from Upwork, Fiverr, Payoneer, Deel, PayPal, Wise, Amazon, Stripe, Airbnb.</li>
+              <li>Business payments – Transfers from a registered business for services provided or salary.</li>
+              <li>Family payments – Transfers from family members with the same last name.</li>
+              <li>Self-transfers – Sending money from your own your bank, fintech app, or brokerage account (e.g. PayPal → Nuage).</li>
+              <li>Friends & third-party payments – Transfers between unrelated people (up to $3,999 per transaction).</li>
+            </ul>
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">Unsupported Payments:</h3>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Nuage will suspend accounts if used for the following:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>Refunds (from universities, businesses, etc.)</li>
+              <li>Gambling or darknet-related payments</li>
+              <li>Loans, debt repayments, or lending platforms</li>
+              <li>Adult services or other high-risk industries</li>
+            </ul>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">❌ Why was my payment rejected?</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Payments can be rejected for several compliance reasons, including:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>Details mismatch – The sender’s info doesn’t match your Nuage account.</li>
+              <li>Payment recall – The sender marked the transfer as unauthorized.</li>
+              <li>Amount exceeds limit – The payment is higher than your account’s permitted limits.</li>
+              <li>Unclear relationship – No clear explanation of sender-beneficiary connection.</li>
+              <li>Unsupported US states – We do not process third-party transfers from Florida, New York, Louisiana, or Alaska.</li>
+              <li>Fraud suspicion – The transaction was flagged as potentially fraudulent.</li>
+            </ul>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              If you believe your payment was wrongly rejected, you can request a manual review by contacting our support team.
+            </p>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">🔢 What are the transaction limits?</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>Peer-to-peer & third-party transfers: Maximum of $3,999 per transaction.</li>
+              <li>Payroll ,freelance & payments: From businesses and platforms (Upwork, Fiverr, PayPal, Wise, etc.) → No limit.</li>
+            </ul>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">⏱️ How long do deposits take?</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>ACH deposits: Same-day or up to 1 business day.</li>
+              <li>Wire transfers: 1–2 business days.</li>
+              <li>USDC/EURC deposits: Instant & free.</li>
+              <li>Crypto withdrawals (USDC/EURC): Instant.</li>
+            </ul>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">🕒 When does Nuage process transactions?</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>Monday to Friday: 9:00 AM – 5:00 PM New York Time (2:00 PM – 10:00 PM GMT).</li>
+              <li>Weekend transactions are processed on Monday morning.</li>
+              <li>US federal banking holidays: Processing resumes the next business day.</li>
+            </ul>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">💵 How can I withdraw funds?</h2>
+            <ul class="list-disc list-inside text-gray-700 mb-8 leading-relaxed space-y-2">
+              <li>Transfer instantly to crypto exchanges or any external wallet in USDC/EURC</li>
+              <li>Withdraw via our OTC Desk to your local bank account or mobile money wallet (Supported in South Africa, Nigeria, Ghana, Cameroon, Republic of Congo, Gabon, Central African Republic, Chad, Equatorial Guinea, Cote d’ivoire, Senegal, Benin, Togo, Niger, Burkina faso, Mali, Guinea-Bissau). Email us our withdraw@nuage.money or send a text to Whatsapp ‪+1 (555) 762‑7491‬</li>
+            </ul>
+  
+            <h2 class="text-3xl font-bold mb-6 text-gray-900">🔐 Is my Nuage account secure?</h2>
+            <p class="text-gray-700 mb-8 leading-relaxed">
+              Yes. Your Nuage account is secured. You should activate Two-Factor Authentication and keep your login details secured at all times. Nuage or any of its agents will never ask for your login details.
+            </p>
+          </div>
+        </div>
+      </section>
+      </main>
+    </div>
+    
 
     <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
